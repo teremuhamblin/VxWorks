@@ -2,6 +2,32 @@
 # 📘 VxWorks
    - Felin / RTOS / Inspired Kernel
 
+--- 
+
+<p align="left">
+
+  <!-- Watchdog -->
+  <img src="https://img.shields.io/badge/Watchdog-Active-purple?style=for-the-badge">
+
+  <!-- IPC -->
+  <img src="https://img.shields.io/badge/IPC-MessageQueue-purple?style=for-the-badge">
+
+  <!-- Scheduler -->
+  <img src="https://img.shields.io/badge/Scheduler-PriorityBased-purple?style=for-the-badge">
+
+  <!-- Ballistics -->
+  <img src="https://img.shields.io/badge/Ballistics-Module-purple?style=for-the-badge">
+
+  <!-- Sensors -->
+  <img src="https://img.shields.io/badge/Sensors-Operational-purple?style=for-the-badge">
+
+  <!-- Comms -->
+  <img src="https://img.shields.io/badge/Comms-Radio_Tactique-purple?style=for-the-badge">
+
+</p>
+
+---
+
 ### Système d’exploitation embarqué tactique
 - — *Architecture modulaire militaire*
 ### Projet GitHub
@@ -107,6 +133,37 @@ flowchart TD
 ---
 
 ### ⚙️ Fonctionnement interne
+
+<p align="center">
+
+  <!-- CI/CD -->
+  <img src="https://img.shields.io/github/actions/workflow/status/teremuhamblin/VxWorks/build.yml?label=Build%20CI&logo=github&style=for-the-badge">
+
+  <!-- Dernier commit -->
+  <img src="https://img.shields.io/github/last-commit/teremuhamblin/VxWorks?color=grey&logo=git&style=for-the-badge">
+
+  <!-- Issues -->
+  <img src="https://img.shields.io/github/issues/teremuhamblin/VxWorks?logo=github&style=for-the-badge">
+
+  <!-- Pull Requests -->
+  <img src="https://img.shields.io/github/issues-pr/teremuhamblin/VxWorks?logo=github&style=for-the-badge">
+
+  <!-- License -->
+  <img src="https://img.shields.io/github/license/teremuhamblin/VxWorks?logo=opensourceinitiative&style=for-the-badge">
+
+  <!-- Release -->
+  <img src="https://img.shields.io/github/v/release/teremuhamblin/VxWorks?logo=github&style=for-the-badge">
+
+  <!-- Code Size -->
+  <img src="https://img.shields.io/github/languages/code-size/teremuhamblin/VxWorks?color=grey&style=for-the-badge">
+
+  <!-- Langages -->
+  <img src="https://img.shields.io/github/languages/top/teremuhamblin/VxWorks?logo=c&style=for-the-badge">
+
+  <!-- Activity -->
+  <img src="https://img.shields.io/github/commit-activity/m/teremuhamblin/VxWorks?style=for-the-badge">
+
+</p>
 
 >🧵 Ordonnancement
 - Priorité stricte  
