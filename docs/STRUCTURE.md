@@ -3,19 +3,38 @@
 
 ```text
 VxWorks/
-├── README.md
-├── config/
-│   └── system_config.h
-├── core/
-│   ├── rtos.h
-│   └── rtos.c
+│
+├── src/
+│   ├── rtos.c
+│   ├── scheduler.c
+│   ├── watchdog.c
+│   ├── queue.c
+│   └── utils.c
+│
 ├── modules/
 │   ├── sensors.c
 │   ├── comms.c
 │   ├── health.c
 │   └── ballistics.c
-├── src/
-│   └── main.c
-├── Makefile
-└── .gitignore
+│
+├── include/
+│   ├── rtos.h
+│   ├── scheduler.h
+│   ├── watchdog.h
+│   ├── queue.h
+│   └── config.h
+│
+├── docs/
+│   ├── architecture.md
+│   ├── tasks.md
+│   ├── ipc.md
+│   ├── watchdog.md
+│   └── ballistics.md
+│
+├── tests/
+│   ├── test_watchdog.c
+│   └── test_queue.c
+│
+└── .github/workflows/
+    └── build.yml
 ```
