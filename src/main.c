@@ -1,17 +1,18 @@
+#include "rtos.h"
+#include "scheduler.h"
+#include "watchdog.h"
+#include "queue.h"
+
 #include <stdio.h>
-#include "core/rtos.h"
 
 int main(void)
 {
-    printf("[SYSTEM] Démarrage VxWorks\n");
+    printf("[RTOS] Initialisation du noyau FELIN...\n");
 
     rtos_init();
     rtos_start();
 
-    printf("[SYSTEM] RTOS en fonctionnement, tâches actives\n");
-    /* Dans un vrai système embarqué, on ne quitte pas main() */
-    while (1)
-        ;
+    printf("[RTOS] Noyau opérationnel.\n");
 
     return 0;
 }
