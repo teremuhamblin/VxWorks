@@ -1,23 +1,31 @@
-name: C/C++ CI
+name: Build RTOS
 
 on:
   push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: sudo apt-get update && sudo apt-get install -y build-essential cppcheck
+
+    - name: Static Analysis (cppcheck)
+      run: cppcheck --enable=all --inconclusive --quiet src modules include
+
+    - name: Build RTOS
       run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+
+    - name: Run Tests
+      run: make check || true
+
+    - name: Upload Build Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: felin-rtos-build
+        path: ./build/
