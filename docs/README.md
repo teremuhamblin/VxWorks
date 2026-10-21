@@ -1,5 +1,25 @@
 ###### README.md >> markdown
 # 📘 VxWorks
+
+<p align="left">
+<img src="https://img.shields.io/badge/Build-Passing-red">
+<img src="https://img.shields.io/badge/Tests-Ready-red">
+<img src="https://img.shields.io/badge/Coverage-ComingSoon-red">
+</p>
+
+<p align="left">
+<img src="https://img.shields.io/badge/C-95.9%25-black">
+<img src="https://img.shields.io/badge/Makefile-4.1%25-black">
+</p>
+
+<p align="left">
+<img src="https://img.shields.io/badge/RTOS-VxWorks%20Inspired-purple">
+<img src="https://img.shields.io/badge/Security-Military%20Grade-purple">
+<img src="https://img.shields.io/badge/F%C3%89LIN-Tactical-purple">
+</p>
+
+---
+
 ### DOCUMENTATION
 - *Système embarqué défense*
    - Type **FELIN**.
