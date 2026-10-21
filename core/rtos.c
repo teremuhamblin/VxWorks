@@ -2,26 +2,28 @@
 #include <vxWorks.h>
 #include <taskLib.h>
 #include "rtos.h"
+#include "../config/system_config.h"
+#include "../modules/sensors.h"
+#include "../modules/comms.h"
+#include "../modules/health.h"
+#include "../modules/ballistics.h"
 
-static void rtos_critical_task(void)
+static void rtos_init_tasks(void)
 {
-    printf("[RTOS] Démarrage de la tâche critique\n");
-
-    while (1)
-    {
-        printf("[RTOS] Cycle critique exécuté\n");
-        taskDelay(30); /* 30 ticks ~ 0.5 sec */
-    }
+    taskSpawn("tSensors",    TASK_PRIO_SENSORS,    0, 4096, (FUNCPTR)sensors_task,    0,0,0,0,0,0,0,0,0,0);
+    taskSpawn("tComms",      TASK_PRIO_COMMS,      0, 4096, (FUNCPTR)comms_task,      0,0,0,0,0,0,0,0,0,0);
+    taskSpawn("tHealth",     TASK_PRIO_HEALTH,     0, 4096, (FUNCPTR)health_task,     0,0,0,0,0,0,0,0,0,0);
+    taskSpawn("tBallistics", TASK_PRIO_BALLISTICS, 0, 4096, (FUNCPTR)ballistics_task, 0,0,0,0,0,0,0,0,0,0);
 }
 
-void rtosStart(void)
+void rtos_init(void)
 {
-    printf("[RTOS] Initialisation du module\n");
+    printf("[RTOS] Initialisation noyau FELIN\n");
+    rtos_init_tasks();
+}
 
-    taskSpawn("tCritical",
-              90,      /* priorité haute */
-              0,
-              4096,
-              (FUNCPTR)rtos_critical_task,
-              0,0,0,0,0,0,0,0,0,0);
+void rtos_start(void)
+{
+    printf("[RTOS] Noyau en fonctionnement (ordonnancement par priorités)\n");
+    /* Le noyau s'appuie sur le scheduler VxWorks, pas de boucle ici */
 }
