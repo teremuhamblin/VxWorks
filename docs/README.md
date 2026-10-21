@@ -1,15 +1,14 @@
 ###### README.md >> markdown
-## 📘 Documentation complète
-##### Système embarqué défense / FELIN.
+# 📘 VxWorks
+### DOCUMENTATION
+- *Système embarqué défense*
+   - Type **FELIN**.
+   - *Système d'exploitation embarqué* pédagogique inspiré des architectures militaires françaises
+   - type *FÉLIN* / *systèmes modulaires embarqués*
+   - ***ce projet contient des informations classifiées***
 
-# VxWorks
-
-Système d'exploitation embarqué pédagogique inspiré des architectures militaires françaises
-(type FÉLIN / systèmes modulaires embarqués).  
-Ce projet ne contient aucune information classifiée.
-
-Fonctionnalités
-
+### Fonctionnalités
+```text
 1. Noyau RTOS
 - Ordonnancement par priorités
 - Tâches indépendantes
@@ -39,42 +38,34 @@ Permet la communication interne :
 - Ballistics : calcul pseudo‑balistique
 - Watchdog : sécurité
 - MsgQueue : communication interne
+```
 
-Build
-`bash
+>Build
+```bash
 make
-`
+```
 
-Exécution
-Sur cible VxWorks ou environnement RTP :
-`tcl
+>Exécution
+- Sur cible **VxWorks** ou *environnement RTP* :
+```tcl
 -> rtpSp "felin-rtos.out"
-`
+```
 
-Architecture
-`
+### Architecture
+```text
 core/        → noyau RTOS
 modules/     → tâches embarquées
 config/      → paramètres système
 src/         → point d'entrée
-`
+```
 
-Objectif pédagogique
+### Objectif pédagogique
+```markdown
 Ce projet reproduit :
 - une architecture embarquée robuste
 - un modèle RTOS militaire réaliste
 - des mécanismes de sécurité (watchdog)
 - des communications internes (message queue)
-`
-
----
-
-🎯 Ton projet est maintenant :
-✔ Ultra réaliste  
-✔ Modulaire  
-✔ Sécurisé (watchdog)  
-✔ Communicant (message queue)  
-✔ Documenté  
-✔ Compatible VxWorks / RTOS militaire pédagogique
+```
 
 ---
