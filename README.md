@@ -1,37 +1,26 @@
 ###### README.md >> markdown
-
 # 📘 VxWorks
-- **VxWorks-RTOS-Module**
+
+- Projet militaire du *système embarqué de défense* Française type **FÉLIN** :
 
 ```text
-Module RTOS minimaliste inspiré des systèmes embarqués militaires :
-- tâches temps réel
-- ordonnancement déterministe
-- boucle critique
-- gestion simple des priorités
+- noyau temps réel minimal (RTOS)
+- tâches capteurs, communications, santé système, calcul pseudo-balistique
+- ordonnancement par priorités
+- boucle critique déterministe
 ```
 
-### 📦 Structure du projet
-
-```text
-VOIR ~/docs/STRUCTURE.md
-```
-
->>Ce projet est pédagogique et compatible avec un environnement *VxWorks ou tout RTOS similaire*.
+>>Ce projet contient des *informations classifiées* et **UNIQUEMENT** une *architecture réaliste*.
 
 ### Build
 ```bash
 make
 ```
 
-### Exécution (RTP)
-```tcl
--> rtpSp "vxworks.out"
+### Exécution
+```text
+RTP ou cible embarquée simulée
 ```
-
-### Exécution (Kernel)
-```tcl
--> rtosStart
-```
+   - Lancer le binaire sur la cible ou dans un environnement simulé.
 
 ---
