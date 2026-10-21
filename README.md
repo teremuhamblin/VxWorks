@@ -49,51 +49,17 @@ Ce noyau fournit :
 
 ---
 
-🧩 Structure du projet
-`
-FELIN-RTOS/
-│
-├── src/
-│   ├── rtos.c
-│   ├── scheduler.c
-│   ├── watchdog.c
-│   ├── queue.c
-│   └── utils.c
-│
-├── modules/
-│   ├── sensors.c
-│   ├── comms.c
-│   ├── health.c
-│   └── ballistics.c
-│
-├── include/
-│   ├── rtos.h
-│   ├── scheduler.h
-│   ├── watchdog.h
-│   ├── queue.h
-│   └── config.h
-│
-├── docs/
-│   ├── architecture.md
-│   ├── tasks.md
-│   ├── ipc.md
-│   ├── watchdog.md
-│   └── ballistics.md
-│
-├── tests/
-│   ├── test_watchdog.c
-│   └── test_queue.c
-│
-└── .github/workflows/
-    └── build.yml
-`
+### 🧩 Structure complète du projet
+```markdown
+VOIR structure.md et architecture.md dans docs/
+```
 
 ---
 
-🛰️ Architecture générale du noyau
+### 🛰️ Architecture générale du noyau
 
-Diagramme ASCII
-`
+**Diagramme ASCII**
+```schema
                 +---------------------+
                 |     Scheduler       |
                 |  (Priority-based)   |
@@ -116,12 +82,12 @@ Diagramme ASCII
                     +------v------+
                     |  Watchdog   |
                     +-------------+
-`
+```
 
 ---
 
-🧠 Diagramme Mermaid — Flux RTOS
-`mermaid
+### 🧠 Diagramme Mermaid — Flux RTOS
+```mermaid
 flowchart TD
     A[Scheduler] --> B[Sensors Task]
     A --> C[Comms Task]
@@ -136,25 +102,25 @@ flowchart TD
     F --> G[Watchdog]
 
     G --> A
-`
+```
 
 ---
 
-⚙️ Fonctionnement interne
+### ⚙️ Fonctionnement interne
 
-🧵 Ordonnancement
+>🧵 Ordonnancement
 - Priorité stricte  
 - Tâches critiques : Ballistics, Sensors  
 - Tâches secondaires : Comms, Health  
 - Watchdog surveille les deadlines  
 
-🔐 IPC (Message Queue)
+>🔐 IPC (Message Queue)
 - FIFO  
 - Messages inter‑modules  
 - Buffer circulaire  
 - Gestion des débordements  
 
-🛡️ Watchdog militaire
+>🛡️ Watchdog militaire
 - Vérifie les tâches critiques  
 - Timeout configurable  
 - Reset logiciel  
@@ -162,7 +128,7 @@ flowchart TD
 
 ---
 
-📡 Modules tactiques
+### 📡 Modules tactiques
 | Module | Rôle | Priorité | Dossier |
 |--------|------|----------|---------|
 | Sensors | Acquisition terrain | Haute | /modules/sensors.c |
@@ -173,56 +139,59 @@ flowchart TD
 
 ---
 
-🛠️ Compilation & Exécution
+### 🛠️ Compilation & Exécution
 
-VxWorks
-`
+**VxWorks**
+```text
 make vxworks
 ld <rtos.o>
 rtos_start
-`
+```
 
-Linux Simulation (POSIX)
-`
+**Linux Simulation (POSIX)**
+```text
 make sim
 ./felinrtossim
-`
+```
 
 ---
 
-🧪 Tests unitaires
-`
+### 🧪 Tests unitaires
+```text
 make tests
 ./tests/test_watchdog
 ./tests/test_queue
-`
+```
 
 ---
 
-🧬 CI/CD — GitHub Actions
-Workflow : .github/workflows/build.yml
+### 🧬 CI/CD — GitHub Actions
+Workflow : **.github/workflows/build.yml**
 
 Fonctions :
+```text
 - compilation automatique  
 - analyse statique (cppcheck)  
 - artefacts RTOS  
 - badge Build Passing  
+```
 
 ---
 
-📘 Documentation
+### 📘 Documentation
 Tous les documents sont dans /docs/ :
-
+```text
 - architecture.md  
 - tasks.md  
 - ipc.md  
 - watchdog.md  
 - ballistics.md  
+```
 
 ---
 
-🗺️ Roadmap militaire
-`
+### 🗺️ Roadmap militaire
+```text
 - [x] Watchdog militaire
 - [x] Message Queue IPC
 - [x] Architecture RTOS complète
@@ -232,13 +201,16 @@ Tous les documents sont dans /docs/ :
 - [ ] Mode Combat / Mode Dégradé
 - [ ] Logger sécurisé chiffré
 - [ ] Analyse statique complète
-`
+````
 
 ---
 
-🏁 Crédits
-Développement : Teremu Hamblin  
-Architecture : FELIN‑RTOS  
-Inspiration : VxWorks, INTEGRITY, Armée de Terre 🇫🇷
+### 🏁 Crédits
+- Développement : The MadDoG.tmdg 
+- Architecture : Felin.RTOS 
+- Inspiration : VxWorks, INTEGRITY.
 
 ---
+
+![Armée de Terre](https://img.shields.io/badge/Arm%C3%A9e_de_Terre-Soutien_Officiel-blue?logo=france&logoColor=white)
+![Légion Étrangère](https://img.shields.io/badge/L%C3%A9gion_%C3%89trang%C3%A8re-Honneur_et_Fid%C3%A9lit%C3%A9-success?logo=france&logoColor=white)
