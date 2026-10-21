@@ -1,5 +1,5 @@
 TARGET := vxworks.out
-SRC := src/main.c src/rtos.c
+SRC := src/main.c core/rtos.c modules/sensors.c modules/comms.c modules/health.c modules/ballistics.c
 OBJS := $(SRC:.c=.o)
 
 CC := cc
