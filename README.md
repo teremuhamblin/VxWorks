@@ -4,15 +4,17 @@
 
 ### Système d’exploitation embarqué tactique
 - — *Architecture modulaire militaire*
-### Projet GitHub officiel
+### Projet GitHub
 - — **Armée de Terre**
 
 ---
 
-🛰️ FELIN‑RTOS — Noyau temps réel inspiré VxWorks
+### 🛰️ Felin‑RTOS
+- — Noyau temps réel inspiré VxWorks
 Système d’exploitation embarqué temps réel, inspiré des architectures VxWorks, INTEGRITY, et des systèmes tactiques du programme FÉLIN de l’Armée de Terre 🇫🇷.
 
-Ce noyau fournit :  
+Ce noyau fournit :
+```markdown
 - ordonnancement par priorités  
 - watchdog militaire  
 - message queue IPC  
@@ -21,18 +23,29 @@ Ce noyau fournit :
 - documentation complète  
 - CI/CD GitHub Actions  
 - compatibilité VxWorks / POSIX simulation  
-
+```
 ---
 
 🛡️ Badges techniques avancés
-https://img.shields.io/badge/Build-Passing-success
-https://img.shields.io/badge/Tests-Ready-blue
-https://img.shields.io/badge/Coverage-ComingSoon-yellow
-https://img.shields.io/badge/C-95.9%25-blue
-https://img.shields.io/badge/Makefile-4.1%25-lightgrey
-https://img.shields.io/badge/RTOS-VxWorks%20Inspired-red
-https://img.shields.io/badge/Security-Military%20Grade-black
-https://img.shields.io/badge/F%C3%89LIN-Tactical-green
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Build-Passing-success">
+<img src="https://img.shields.io/badge/Tests-Ready-success">
+<img src="https://img.shields.io/badge/Coverage-ComingSoon-success">
+
+<br>
+
+<img src="https://img.shields.io/badge/C-95.9%25-success">
+<img src="https://img.shields.io/badge/Makefile-4.1%25-success">
+
+<br>
+
+<img src="https://img.shields.io/badge/RTOS-VxWorks%20Inspired-success">
+<img src="https://img.shields.io/badge/Security-Military%20Grade-success">
+<img src="https://img.shields.io/badge/F%C3%89LIN-Tactical-sucess">
+
+</p>
 
 ---
 
