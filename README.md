@@ -14,14 +14,7 @@ Module RTOS minimaliste inspiré des systèmes embarqués militaires :
 ### 📦 Structure du projet
 
 ```text
-VxWorks-RTOS-Module/
-├── README.md
-├── src/
-│   ├── rtos.h
-│   ├── rtos.c
-│   └── main.c
-├── Makefile
-└── .gitignore
+VOIR ~/docs/STRUCTURE.md
 ```
 
 >>Ce projet est pédagogique et compatible avec un environnement *VxWorks ou tout RTOS similaire*.
