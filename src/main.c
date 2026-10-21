@@ -1,17 +1,17 @@
 #include <stdio.h>
-#include <unistd.h>
-#include "rtos.h"
+#include "core/rtos.h"
 
 int main(void)
 {
-    printf("[RTOS] Module RTP lancé\n");
+    printf("[SYSTEM] Démarrage VxWorks\n");
 
-    for (int i = 0; i < 5; i++)
-    {
-        printf("[RTOS] Boucle RTP %d\n", i);
-        sleep(1);
-    }
+    rtos_init();
+    rtos_start();
 
-    printf("[RTOS] Fin du module RTP\n");
+    printf("[SYSTEM] RTOS en fonctionnement, tâches actives\n");
+    /* Dans un vrai système embarqué, on ne quitte pas main() */
+    while (1)
+        ;
+
     return 0;
 }
